@@ -1,0 +1,30 @@
+{
+  "name": "text-file-words",
+  "version": "1.0.0",
+  "description": "text file words",
+  "main": "bundle",
+  "scripts": {
+    "start::dev": "NODE_ENV=development NODE_PATH=src nodemon --watch src --exec 'babel-node src'",
+    "start": "NODE_ENV=production NODE_PATH=bundle node bundle",
+    "build": "babel src --out-dir bundle",
+    "test": "NODE_ENV=test NODE_PATH=src mocha 'test/**/*.spec.js' --require babel-register"
+  },
+  "author": "Miles Watson",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-rewire": "^1.1.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5",
+    "sinon": "^5.1.0",
+    "supertest": "^3.1.0"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "node-fetch": "^2.1.2",
+    "pug": "^2.0.3"
+  }
+}

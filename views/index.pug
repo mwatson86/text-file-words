@@ -1,0 +1,25 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    title= title
+  body
+    h1= title
+    table
+      thead
+        tr
+          td(width='100')
+            h4='Word'
+          td(width='100')
+            h4='Count'
+          td(width='300')
+            h4='Is prime'
+      tbody
+        each obj in data
+          tr
+            td
+              p=obj.word
+            td
+              p=obj.count
+            td
+              p=obj.isPrime
